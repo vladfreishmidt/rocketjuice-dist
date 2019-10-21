@@ -409,12 +409,12 @@ body {
     text-decoration: none;
     color: #0079c5; }
   .services__link::after {
-    content: url("../../img/link-underline.webp");
+    content: url("../img/link-underline.webp");
     position: absolute;
     top: 2rem;
     left: 0; }
   .services__link::before {
-    content: url("../../img/services-link-rocket.png");
+    content: url("../img/services-link-rocket.png");
     transform: rotate(45deg);
     position: absolute;
     top: 3rem;
@@ -426,7 +426,7 @@ body {
     top: -1.2rem;
     opacity: 1; }
   .services__link:hover::after {
-    content: url("../../img/link-underline-long.webp");
+    content: url("../img/link-underline-long.webp");
     left: -2rem; }
 
 .services__partner-logo-wrapper {

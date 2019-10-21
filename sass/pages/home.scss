@@ -101,14 +101,14 @@ $color-grey-50:#e4e4e4;
         }
 
         &::after {
-            content:url('../../img/link-underline.webp');
+            content:url('../img/link-underline.webp');
             position: absolute;
             top: 2rem;
             left: 0;
         }
 
         &::before {
-            content:url('../../img/services-link-rocket.png');
+            content:url('../img/services-link-rocket.png');
             transform: rotate(45deg);
             position: absolute;
             top: 3rem;
@@ -124,7 +124,7 @@ $color-grey-50:#e4e4e4;
         }
 
         &:hover::after {
-            content:url('../../img/link-underline-long.webp');
+            content:url('../img/link-underline-long.webp');
             left: -2rem;
         }
     }
