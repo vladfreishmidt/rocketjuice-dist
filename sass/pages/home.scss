@@ -1,0 +1,309 @@
+// COLORS
+$color-primary: #f9c721;
+$color-heading: #333;
+$color-text: #555;
+$color-grey-light: #fcfcfc;
+$color-grey-50:#e4e4e4;
+
+.section {
+
+    &__heading {
+        text-transform: uppercase;
+
+        span {
+            font-weight: 300;
+            text-transform: none; 
+        }
+    }
+}
+
+.header{
+    background: url(../../img/home-hero-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.hero {
+    color: #fff;
+    &__title {
+        color: #fff;
+    }
+
+
+
+    &__desc {
+        font-size: 2.2rem;
+        font-weight: 300;
+        margin-bottom: 5rem;
+    }
+}
+
+
+.intro-info {
+    background-color: $color-primary;
+
+    img {
+        opacity: .6;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .intro-info {
+        img {
+            display: inline-block;
+            margin-top: 3rem;
+            width: 8rem;
+        }
+    }
+}
+
+.services {
+    .row {
+        &:not(:first-child){
+            margin-bottom: 10rem;
+        }
+
+        &:last-child {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__icon {
+        font-size: 12rem;
+        color: $color-grey-50;
+    }
+
+    &__heading {
+        font-size: 3rem;
+        text-transform: capitalize;
+        margin-bottom: 2rem;
+    }
+
+    &__desc {
+        margin-bottom: 2rem;
+    }
+
+    &__link {
+        font-size: 1.8rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: #0079c5;
+        position: relative;
+        transition: all .5s ease;
+        display: inline-block;
+        margin-left: 35%; 
+        text-align: center;
+
+        &:hover,
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: #0079c5;
+        }
+
+        &::after {
+            content:url('../../img/link-underline.webp');
+            position: absolute;
+            top: 2rem;
+            left: 0;
+        }
+
+        &::before {
+            content:url('../../img/services-link-rocket.png');
+            transform: rotate(45deg);
+            position: absolute;
+            top: 3rem;
+            left: -1rem;
+            opacity: 0;
+            transition: all .5s ease;
+        }
+
+        &:hover::before {
+            left: 11.6rem;
+            top: -1.2rem;
+            opacity: 1;
+        }
+
+        &:hover::after {
+            content:url('../../img/link-underline-long.webp');
+            left: -2rem;
+        }
+    }
+
+    &__partner-logo-wrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        img {
+            max-width: 100%;
+            padding: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services {
+        &__icon {
+            font-size: 10rem;
+            display: block;
+            margin-bottom: 3rem;
+            text-align: left;
+        }
+
+        &__heading {
+            font-size: 2.7rem;
+        }
+
+        &__link {
+            margin-left: 43%;
+        }
+
+        &__partner-logo-wrapper {
+            margin-top: 3rem;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            img {
+                max-width: 217px;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 496px) {
+    .services {
+        .row {
+            text-align: center;
+
+            &:not(:first-child) {
+                margin-bottom: 7rem;
+            }
+        }
+
+        &__icon {
+            text-align: center;
+        }
+
+        &__link {
+            margin-left: 0;
+        }
+    }
+}
+
+.bios {
+    background-color: $color-grey-light;
+
+    .section__heading {
+        margin-bottom: 2rem;
+    }
+
+    &__intro {
+        margin-bottom: 4rem;
+    }
+
+    .bio-card {
+        text-align: center;
+        background-color: #fff;
+        height: 100%;
+        padding: 5rem 3.5rem;
+        box-shadow: 0px 0px 7px 0px rgba(119, 119, 119, 0.2);
+
+        &__photo {
+            border-radius: 50%;
+            max-width: 17rem;
+            display: inline-block;
+            margin-bottom: 4rem;
+        }
+
+        &__name {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        &__title {
+            font-size: 1.8rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            margin-bottom: 4rem;
+        }
+
+        &__desc {
+            font-weight: 300;
+            text-align: justify;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .bios {
+        .bio-card {
+            height: auto;
+            margin-bottom: 3rem;
+
+        }
+    }
+}
+
+
+@media screen and (max-width: 410px) {
+    .bios {
+        .bio-card {
+            padding: 2.7rem 2rem;
+
+            &__desc {
+                text-align: center;
+                font-size: 1.6rem;
+            }
+        } 
+    }      
+}
+   
+
+
+
+.workshops {
+
+    &__title {
+        font-size: 2.4rem;
+        color: $color-primary;
+        margin-bottom: 3rem;
+    }
+
+    &__p {
+        font-weight: 300;
+        font-size: 1.8rem;       
+
+        &:first-child {
+            margin-top: 5.2rem;
+        }
+    }
+
+}
+
+.contact {
+    background-color: $color-grey-light;
+
+    .form-container {
+        min-height: 54rem;
+        background-color: #fff;
+        padding: 6rem 5rem;
+        -webkit-box-shadow: 0px 0px 7px 0px rgba(119, 119, 119, 0.3);
+        -moz-box-shadow: 0px 0px 7px 0px rgba(119, 119, 119, 0.3);
+        box-shadow: 0px 0px 7px 0px rgba(119, 119, 119, 0.3);
+        position: relative;
+
+        h3 {
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: .15rem;
+        }
+    }
+}
+
+.footer {
+    background-color: grey;
+    min-height: 20rem;
+}

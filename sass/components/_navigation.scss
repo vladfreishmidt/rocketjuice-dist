@@ -1,0 +1,237 @@
+/* HEADER */
+#main-header {
+
+	text-align: center;
+	margin-bottom: 50px;
+	width: 100%;
+	z-index: 999; /* puts itself on top of all other elements on the page */
+	padding: 20px 0;
+}
+
+/* LOGO - the h1 */
+#logo {
+	color: #fff;
+	align-self: center;
+}
+
+#logo span {
+	color: coral;
+}
+
+#logo a{
+	text-decoration: none;
+	color: #fff;
+}
+
+#logo a:hover {
+	color: coral;
+}
+
+
+/* hiding the checkbox */
+.nav-toggle {
+	display: none;
+}
+
+/* STYLING/POSITIONING THE HAMBURGER MENU */
+.nav-toggle-label {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin-right: 1em;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+	display: block;
+	background: #fff;
+	height: 3px;
+	width: 30px;
+	border-radius: 2px;
+	position: relative;
+	transition: all .5s ease-in-out;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+	content: '';
+	position: absolute;
+}
+
+.nav-toggle-label span::before {
+	bottom: 10px;
+}
+.nav-toggle-label span::after {
+	top: 10px;
+}
+
+#nav-toggle:checked ~ .nav-toggle-label span {
+	background: transparent; /* setting it to the same background as header so it "disappears" */
+}
+
+/* transforming the before and after span into an X */
+#nav-toggle:checked ~ .nav-toggle-label span::before {
+	transform: rotate(45deg);
+	bottom: 0;
+	background: #fff;
+}
+
+#nav-toggle:checked ~ .nav-toggle-label span::after {
+	transform: rotate(-45deg);
+	top: 0;
+	background: #fff;
+}
+
+#menu {
+    position: absolute;
+    background: $color-primary;
+    text-align: right;
+    top: 100%;
+    right: 0;
+    width: 70%;
+    transform: scale(0, 1);
+    transform-origin: top;
+    transition: transform .4s ease-in-out;
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+}
+
+#menu li {
+	padding: 1.5rem 3rem;
+}
+
+#menu a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 18px;
+	text-transform: uppercase;
+	opacity: 0;
+	transition: opacity .15s ease-in-out;
+}
+
+#menu a:hover {
+	color: #333;
+}
+
+#nav-toggle:checked + #menu {
+	transform: scale(1, 1);
+}
+#nav-toggle:checked ~ #menu a {
+	opacity: 1;
+	transition: opacity .25s ease-in-out .35s;
+}
+
+/* media query with mobile first approach */
+/* remove the comment around the media query to see the desktop version of the menu */
+
+/*
+@media screen and (min-width: 800px){
+	.nav-toggle-label {
+		display: none;
+	}
+
+	#main-header {
+		border-bottom: 2px solid coral;
+	}
+
+	#main-header .container {
+		display: flex;
+	}
+
+	#main-header #logo {
+		flex:1;
+	}
+	
+	#menu a {
+		opacity: 1;
+	}
+
+	#menu {
+		all: unset;
+		flex: 2;
+	}
+
+	#menu ul {
+		display: flex;
+		align-items: center;
+		height: 100%;
+	}
+
+	#menu li {
+		margin: auto;
+	}
+}
+*/
+
+
+
+
+
+
+
+
+    .xl-nav {
+        padding: 5rem 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        ul {
+            display: inline-block;
+            margin-left: auto;
+
+            li {
+                display: inline-block;
+
+                &:hover a {
+                    color: #fff;
+                }
+
+                a {
+                    color: $color-primary;
+                    font-weight: 400;
+                    transition: color .3s ease;
+                }
+
+                &:last-child a {
+                    padding: 2rem 0 2rem 2rem;
+                }
+
+                &:not(:last-child) a {
+                    padding: 2rem 2rem;
+                }
+            }
+        }
+    }
+
+    .desk-nav {
+        display: flex;
+    }
+    
+    .mob-nav {  
+        display: none;
+
+        img {
+            max-width: 5rem;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .mob-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .desk-nav {
+            display: none;
+        }
+    }
+  
