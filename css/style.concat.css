@@ -408,7 +408,7 @@ body {
     text-transform: none; }
 
 .header {
-  background: url(../../img/home-hero-bg.jpg) no-repeat center center;
+  background: url(../img/home-hero-bg.jpg) no-repeat center center;
   background-size: cover; }
 
 .hero {
